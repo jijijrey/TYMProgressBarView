@@ -182,8 +182,8 @@ void setRectPathInContext(CGContextRef context, CGRect rect, CGFloat radius);
         
         // recalculate width
         if (!hasInnerBorder) {
-            currentRect.size.width *= self.progress;
             currentRect.size.width = fmaxf(currentRect.size.width, 2 * radius);
+            currentRect.size.width *= self.progress;
         }
         
         [self.barFillColor setFill];
